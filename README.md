@@ -1,27 +1,80 @@
-# Vue 3 + Typescript + Vite
+<h1 align="center">
+  GBreath
+</h1>
+<div align="center">
+  <img src="https://img.shields.io/static/v1?label=License&message=GPL-3&color=51FF96&labelColor=3F454B" alt="GPL-3 License">
+  &#8205;&#8205;
+  <img src="https://img.shields.io/static/v1?label=Version&message=1.2&color=51FF96&labelColor=51FF96" alt="Version 1.0">
+  &#8205;&#8205;
+  <img src="https://img.shields.io/static/v1?label=Open&message=Source&color=3F454B&labelColor=51FF96" alt="Open Source" />
+</div>
+<h2>About Project</h2>
+<p>GBreath is a open source project to help you on your breathing practice.</p>
+<h3>Project goals</h3>
+<ul>
+  <li>Make a good Website</li>
+  <li>Make it free for everyone</li>
+</ul>
+<h2>About Website</h2>
+<p>The website is developed focused on offline first and mobile first</p>
+<h3>Features</h3>
+<ul>
+  <li>
+    <a href="https://vitejs.dev">
+      <img align="center" alt="ViteJs" height="20" width="30" src="https://raw.githubusercontent.com/vitejs/docs-cn/main/public/logo.svg">
+      ViteJS
+    </a>
+  </li>
+  <li>
+    <a href="https://vuejs.org">
+      <img align="center" alt="VueJs" height="20" width="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg">
+      VueJS
+    </a>
+  </li>
+  <li>
+    <a href="https://typescriptlang.org/">
+      <img align="center" alt="Typescript" height="20" width="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">
+      Typescript
+    </a>
+  </li>
+  <li>
+    <a href="https://sass-lang.com/">
+      <img align="center" alt="Sass" height="20" width="30" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg">
+      Scss/Sass
+    </a>
+  </li>
+  <li>
+    <a href="https://web.dev/progressive-web-apps/?gclid=Cj0KCQjwraqHBhDsARIsAKuGZeFpqL8YYq3kD8tuSbLLn9nY_QMkr0fQFMrC98U_s3pS-YH3g1ZanRAaAq8YEALw_wcB">
+      <img align="center" alt="PWA" height="20" width="30" src="https://raw.githubusercontent.com/webmaxru/progressive-web-apps-logo/77744cd5c0a4d484bb3d082c6ac458c44202da03/pwalogo.svg">
+      Progressive Web App
+    </a>
+  </li>
+  <li>
+    <a href="https://iconify.design/">
+      <img align="center" alt="Iconify" width="30" src="https://avatars.githubusercontent.com/u/50354982?v=4">
+      Iconify
+    </a>
+  </li>
+  <li>
+    <a href="https://prettier.io/">
+      <img align="center" alt="Prettier" width="30" src="https://raw.githubusercontent.com/prettier/prettier-logo/master/images/prettier-avatar-dark.svg">
+      Prettier
+    </a>
+  </li>
+  <li>
+    <a href="https://eslint.org/">
+      <img align="center" alt="ESLint" width="30" src="https://avatars.githubusercontent.com/u/6019716?s=200&v=4">
+      ESLint
+    </a>
+  </li>
+  <li>
+    <a href="https://www.netlify.com/">
+      <img align="center" alt="Netlify" width="30" src="https://camo.githubusercontent.com/c8a3dd0309eabdf69cf932a8450e2711307502a47703c54024f4678c41d497ba/68747470733a2f2f7777772e6e65746c6966792e636f6d2f696d672f70726573732f6c6f676f732f6c6f676f6d61726b2e706e67">
+      Netlify
+    </a>
+  </li>
+</ul>
 
-This template should help get you started developing with Vue 3 and Typescript in Vite.
+<h3>Deploy Status</h3>
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Vetur](https://marketplace.visualstudio.com/items?itemName=octref.vetur). Make sure to enable `vetur.experimental.templateInterpolationService` in settings!
-
-### If Using `<script setup>`
-
-[`<script setup>`](https://github.com/vuejs/rfcs/pull/227) is a feature that is currently in RFC stage. To get proper IDE support for the syntax, use [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) instead of Vetur (and disable Vetur).
-
-## Type Support For `.vue` Imports in TS
-
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can use the following:
-
-### If Using Volar
-
-Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
-
-### If Using Vetur
-
-1. Install and add `@vuedx/typescript-plugin-vue` to the [plugins section](https://www.typescriptlang.org/tsconfig#plugins) in `tsconfig.json`
-2. Delete `src/shims-vue.d.ts` as it is no longer needed to provide module info to Typescript
-3. Open `src/main.ts` in VSCode
-4. Open the VSCode command palette
-5. Search and run "Select TypeScript version" -> "Use workspace version"
+<h4>Nothing to see yet</h4>

@@ -1,10 +1,21 @@
 {
-  "HelloWorld": "Hello World",
   "PageNotFound": "404 - Page not found",
-  "HomePage": "Home page",
-  "English": "English",
-  "Portuguese": "Portuguese",
-  "Clicked": "Clicked",
-  "Times": "times",
-  "Increment": "Increment"
+  "WelcomeTo": "Welcome to",
+  "GBreathPresentation": "was made to help you in your breathing practice.",
+  "WhyIShouldPracticeBreathing": "Why I should practice breathing?",
+  "WhyIShouldPracticeBreathingAnswer": "Breathing exercises can help you relax, because they make your body feel like it does when you are already relaxed. Deep breathing is one of the best ways to lower stress in the body. This is because when you breathe deeply, it sends a message to your brain to calm down and relax.",
+  "FreePikAttribution": "People vector created by freepik - www.freepik.com",
+  "SeeTheBreathingTechniques": "See the breathing techniques",
+  "ChooseABreathing": "Choose a breathing",
+  "StartPractice": "Start Practice",
+  "BreathingStartingIn": "Breathing starting in",
+  "InhaleFor": "Inhale for",
+  "HoldFor": "Hold for",
+  "ExhaleFor": "Exhale for",
+  "TakeARestFor": "Take a rest for",
+  "ReturnAndSeeOtherBreathings": "Return and see other Breathings",
+  "SecondsTime": "Seconds",
+  "BreathingNotFound": "Breathing not found",
+  "Settings": "Settings",
+  "ChooseYourAppLanguage": "Choose your app language"
 }

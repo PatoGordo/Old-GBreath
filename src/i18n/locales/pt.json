@@ -1,10 +1,21 @@
 {
-  "HelloWorld": "Olá mundo",
   "PageNotFound": "404 - Página não encontrada",
-  "HomePage": "Página inicial",
-  "English": "Inglês",
-  "Portuguese": "Português",
-  "Clicked": "Clicou",
-  "Times": "vezes",
-  "Increment": "Incrementar"
+  "WelcomeTo": "Bem vindo ao",
+  "GBreathPresentation": "foi feito para te ajudar em sua pratica de respiração.",
+  "WhyIShouldPracticeBreathing": "Por que devo praticar a respiração?",
+  "WhyIShouldPracticeBreathingAnswer": "Esses exercicios podem ajudá-lo a relaxar, porque fazem seu corpo se sentir como quando você já está relaxado. A respiração profunda é uma das melhores maneiras de diminuir o estresse no corpo. Isso ocorre porque quando você respira profundamente, ele envia uma mensagem ao seu cérebro para se acalmar e relaxar.",
+  "FreePikAttribution": "Illustração de pessoa criado pelo freepik - www.freepik.com",
+  "SeeTheBreathingTechniques": "Ver as tecnicas de respiração",
+  "ChooseABreathing": "Escolha uma respiração",
+  "StartPractice": "Começe a Pratica",
+  "BreathingStartingIn": "Respiração começando em",
+  "InhaleFor": "Inspire por",
+  "HoldFor": "Segure por",
+  "ExhaleFor": "Espire por",
+  "TakeARestFor": "Descanse por",
+  "ReturnAndSeeOtherBreathings": "Retorne e veja outras Respirações",
+  "SecondsTime": "Segundos",
+  "BreathingNotFound": "Respiração não encontrada",
+  "Settings": "Configurações",
+  "ChooseYourAppLanguage": "Escolha o idioma do seu aplicativo"
 }

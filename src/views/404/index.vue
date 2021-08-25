@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>{{ t("PageNotFound") }}</h1>
+    <h2>{{ t("PageNotFound") }}</h2>
   </div>
 </template>
 

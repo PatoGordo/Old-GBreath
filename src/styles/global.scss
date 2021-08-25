@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 h1,
@@ -13,14 +14,42 @@ h6 {
   font-family: "Poppins", sans-serif !important;
 }
 
+body {
+  background: #fff;
+}
+
 .page-container {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  h1:first-child {
+  margin-bottom: 32px;
+  h2:first-child {
     text-align: center;
     margin-top: 32px;
     margin-bottom: 16px;
   }
+}
+
+[s-default-button] {
+  width: 100%;
+  border: 0;
+  padding: 12px 8px;
+  border-radius: 6px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: filter 0.2s;
+  background: #7ecfc9;
+  font-weight: 500;
+  &:hover {
+    filter: brightness(0.8);
+  }
+}
+
+[s-default-width] {
+  width: min(400px, 100% - 32px) !important;
+}
+
+[logo] {
+  font-family: "Fredoka One", cursive !important;
 }
