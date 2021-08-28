@@ -4,14 +4,7 @@
 
     <div class="about-app">
       <div>
-        <img src="../../assets/breathing.svg" alt="Woman breathing image" />
-        <small>
-          <a
-            class="attribuition"
-            href="https://www.freepik.com/vectors/people"
-            >{{ t("FreePikAttribution") }}</a
-          >
-        </small>
+        <BreathingSvg />
       </div>
 
       <div class="app-presentation-div">
@@ -36,6 +29,7 @@
 
 <script lang="ts" setup>
 import { useI18n } from "vue-i18n";
+import BreathingSvg from "@/assets/breathing.svg";
 
 const { t } = useI18n();
 </script>
@@ -43,9 +37,6 @@ const { t } = useI18n();
 <style lang="scss" scoped>
 .app-presentation {
   font-size: 18px;
-}
-.attribuition {
-  color: #24242d;
 }
 .about-app {
   width: min(920px, 100% - 32px);
@@ -66,7 +57,7 @@ const { t } = useI18n();
       margin-top: 16px;
     }
   }
-  img {
+  svg {
     width: min(420px, 100%);
   }
   @media screen and (max-width: 900px) {

@@ -3,6 +3,7 @@ const userPreferencesStorageName = "APP:USER-PREFERENCES";
 interface IUserPreferences {
   theme: "dark" | "light";
   lang: "en" | "pt";
+  defaultBreathingRepeat: number;
 }
 
 // Detect and set default user preferences
@@ -29,6 +30,7 @@ if (!localStorage.getItem(userPreferencesStorageName)) {
   const detectedPreferences = {
     theme: detectedTheme || "light",
     lang: detectedLang || "en",
+    defaultBreathingRepeat: 16,
   };
 
   localStorage.setItem(
@@ -39,17 +41,24 @@ if (!localStorage.getItem(userPreferencesStorageName)) {
 
 const userPreferences = JSON.parse(
   localStorage.getItem(userPreferencesStorageName) ||
-    '{ "theme": "light", "lang": "en" }'
+    '{ "theme": "light", "lang": "en", defaultBreathingRepeat: "16" }'
 ) as IUserPreferences;
 
 class changeUserPreferences {
   public changeThemeTo(theme: IUserPreferences["theme"]) {
+    document.body.classList.remove(userPreferences.theme);
+    document.body.classList.add(theme);
     userPreferences.theme = theme;
     this.saveChanges();
   }
 
   public changeLangTo(lang: IUserPreferences["lang"]) {
     userPreferences.lang = lang;
+    this.saveChanges();
+  }
+
+  public changeBreathingRepeatTo(newRepeatTime: number) {
+    userPreferences.defaultBreathingRepeat = newRepeatTime;
     this.saveChanges();
   }
 
