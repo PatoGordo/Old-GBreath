@@ -1,9 +1,13 @@
 <template>
-  <div>
+  <div v-if="!isFinished">
     <h2>
       {{ techniques[Number($route.params.id)].name[userPreferences.lang] }}
     </h2>
 
+    <span
+      ><strong>{{ repeatTimes - alreadyRun }}</strong> breaths to go.</span
+    >
+    <br />
     <div class="guide">
       <div class="outside">
         <div
@@ -13,7 +17,7 @@
         ></div>
       </div>
     </div>
-
+    <br />
     <h3>{{ visualReturn }}</h3>
 
     <button
@@ -24,21 +28,43 @@
       {{ t("ReturnAndSeeOtherBreathings") }}
     </button>
   </div>
+  <div class="completed" v-else>
+    <span class="svg-container" s-default-width>
+      <CompleteSvg />
+    </span>
+    <br />
+    <br />
+    <h2 s-default-width>Your breathing session is complete!</h2>
+    <p>I hope you're feeling better!</p>
+    <br />
+    <button
+      s-default-button
+      s-default-width
+      @click="$router.push('/breathings')"
+    >
+      Return to see other breathings
+    </button>
+  </div>
 </template>
 
 <script lang="ts" setup>
 import { techniques } from "@/data/breathings";
 import { userPreferences } from "@/shared/user-preferences";
 import { ref } from "@vue/reactivity";
-import { onMounted } from "@vue/runtime-core";
+import { onMounted, watch } from "@vue/runtime-core";
 import { useI18n } from "vue-i18n";
 import { useRoute } from "vue-router";
+import CompleteSvg from "@/assets/completed.svg";
 
 const { t } = useI18n();
 
 let visualReturn = ref("");
 let currentAnimation = ref("");
 let currentAnimationDuration = ref(0);
+let repeatTimes = ref(userPreferences.defaultBreathingRepeat);
+let alreadyRun = ref(0);
+let isFinished = ref(false);
+
 ref(userPreferences);
 
 const route = useRoute();
@@ -54,24 +80,35 @@ function breathingStep({ stepTime, prefixText, nextStep }: IBreathingStep) {
   currentAnimationDuration.value = stepTime;
 
   visualReturn.value = `${prefixText} ${stepTimerCounter}`;
-  if (stepTime !== 0) {
-    const stepTimer = setInterval(() => {
-      stepTimerCounter--;
-      visualReturn.value = `${prefixText} ${stepTimerCounter}`;
+  if (!isFinished.value) {
+    if (stepTime !== 0) {
+      const stepTimer = setInterval(() => {
+        stepTimerCounter--;
+        visualReturn.value = `${prefixText} ${stepTimerCounter}`;
 
-      if (stepTimerCounter <= 0) {
-        clearInterval(stepTimer);
-        nextStep();
-      }
-    }, 1000);
-  } else {
-    nextStep();
+        if (stepTimerCounter <= 0) {
+          clearInterval(stepTimer);
+          nextStep();
+        }
+      }, 1000);
+    } else {
+      nextStep();
+    }
   }
 }
 
 onMounted(() => {
   startBreathing();
 });
+
+watch(
+  () => alreadyRun.value,
+  (val) => {
+    if (val >= repeatTimes.value) {
+      isFinished.value = true;
+    }
+  }
+);
 
 function startBreathing() {
   currentAnimation.value = "";
@@ -116,14 +153,30 @@ function rest() {
     prefixText: `${t("TakeARestFor")}`,
     nextStep: inhale,
   });
+  alreadyRun.value++;
 }
 </script>
 
 <style lang="scss" scoped>
+.completed {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  .svg-container {
+    svg {
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+}
 button {
   margin-top: 16px;
 }
-h3 {
+h3:nth-child(2) {
   margin-top: 32px;
 }
 .outside {

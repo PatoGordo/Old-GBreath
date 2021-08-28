@@ -12,15 +12,15 @@
       }}</span>
       <br />
       <ul class="steps" s-default-width>
-        <li v-if="techniques[Number($route.params.id)].steps[0] >= 0">
+        <li v-if="techniques[Number($route.params.id)].steps[0] > 0">
           {{ t("InhaleFor") }}
           {{ techniques[Number($route.params.id)].steps[0] }}s;
         </li>
-        <li v-if="techniques[Number($route.params.id)].steps[1] >= 0">
+        <li v-if="techniques[Number($route.params.id)].steps[1] > 0">
           {{ t("HoldFor") }}
           {{ techniques[Number($route.params.id)].steps[1] }}s;
         </li>
-        <li v-if="techniques[Number($route.params.id)].steps[2] >= 0">
+        <li v-if="techniques[Number($route.params.id)].steps[2] > 0">
           {{ t("ExhaleFor") }}
           {{ techniques[Number($route.params.id)].steps[2] }}s;
         </li>
@@ -29,6 +29,15 @@
           {{ techniques[Number($route.params.id)].steps[3] }}s;
         </li>
       </ul>
+      <br />
+      <br />
+      <div class="breathing-repeat-range">
+        <input type="range" min="8" max="120" v-model="repeatTimes" />
+        <label for="volume"
+          >The breathing will repeat
+          <strong>{{ repeatTimes }}</strong> times.</label
+        >
+      </div>
 
       <button
         s-default-button
@@ -42,14 +51,27 @@
 
 <script lang="ts" setup>
 import { techniques } from "@/data/breathings";
-import { userPreferences } from "@/shared/user-preferences";
+import {
+  ChangeUserPreferences,
+  userPreferences,
+} from "@/shared/user-preferences";
 import { ref } from "@vue/reactivity";
+import { watch } from "@vue/runtime-core";
 import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
 
+let repeatTimes = ref(userPreferences.defaultBreathingRepeat);
+
 ref(techniques);
 ref(userPreferences);
+
+watch(
+  () => repeatTimes.value,
+  (val) => {
+    ChangeUserPreferences.changeBreathingRepeatTo(val);
+  }
+);
 </script>
 
 <style lang="scss" scoped>
@@ -64,5 +86,12 @@ ref(userPreferences);
   .steps {
     text-align: start;
   }
+}
+.breathing-repeat-range {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 </style>
