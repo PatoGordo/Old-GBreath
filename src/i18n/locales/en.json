@@ -17,5 +17,11 @@
   "SecondsTime": "Seconds",
   "BreathingNotFound": "Breathing not found",
   "Settings": "Settings",
-  "ChooseYourAppLanguage": "Choose your app language"
+  "ChooseYourAppLanguage": "Choose your app language",
+  "BreathsToGo": "breaths to go",
+  "YourBreathingSessionIsComplete": "Your breathing session is complete!",
+  "IHopeYouAreFeelingBetter": "I hope you're feeling better.",
+  "ReturnToSeeOtherBreathings": "Return to see other breathings",
+  "TheBreathingWillRepeat": "The breathing will repeat",
+  "Times": "times"
 }

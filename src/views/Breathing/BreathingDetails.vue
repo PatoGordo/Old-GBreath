@@ -34,8 +34,8 @@
       <div class="breathing-repeat-range">
         <input type="range" min="8" max="120" v-model="repeatTimes" />
         <label for="volume"
-          >The breathing will repeat
-          <strong>{{ repeatTimes }}</strong> times.</label
+          >{{ t("TheBreathingWillRepeat") }} <strong>{{ repeatTimes }}</strong>
+          {{ t("Times") }}.</label
         >
       </div>
 

@@ -5,7 +5,8 @@
     </h2>
 
     <span
-      ><strong>{{ repeatTimes - alreadyRun }}</strong> breaths to go.</span
+      ><strong>{{ repeatTimes - alreadyRun }}</strong>
+      {{ t("BreathsToGo") }}.</span
     >
     <br />
     <div class="guide">
@@ -34,15 +35,15 @@
     </span>
     <br />
     <br />
-    <h2 s-default-width>Your breathing session is complete!</h2>
-    <p>I hope you're feeling better!</p>
+    <h2 s-default-width>{{ t("YourBreathingSessionIsComplete") }}</h2>
+    <p>{{ t("IHopeYouAreFeelingBetter") }}</p>
     <br />
     <button
       s-default-button
       s-default-width
       @click="$router.push('/breathings')"
     >
-      Return to see other breathings
+      {{ t("ReturnToSeeOtherBreathings") }}
     </button>
   </div>
 </template>

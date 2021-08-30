@@ -17,5 +17,11 @@
   "SecondsTime": "Segundos",
   "BreathingNotFound": "Respiração não encontrada",
   "Settings": "Configurações",
-  "ChooseYourAppLanguage": "Escolha o idioma do seu aplicativo"
+  "ChooseYourAppLanguage": "Escolha o idioma do seu aplicativo",
+  "BreathsToGo": "respiração restantes",
+  "YourBreathingSessionIsComplete": "Sua sessão de respiração está completa!",
+  "IHopeYouAreFeelingBetter": "Eu espero que esteja se sentindo melhor.",
+  "ReturnToSeeOtherBreathings": "Retorne e veja outras repirações",
+  "TheBreathingWillRepeat": "A respiração vai repetir",
+  "Times": "vezes"
 }
